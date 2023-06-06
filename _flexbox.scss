@@ -1,0 +1,138 @@
+@import "./screen-sizes";
+
+$directions: column, row;
+
+$wraps: (
+  "wrap": wrap,
+  "no-wrap": nowrap,
+);
+
+.flex {
+  display: flex;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+@each $direction in $directions {
+  .flex-#{$direction} {
+    flex-direction: #{$direction};
+  }
+}
+
+@each $name, $wrap in $wraps {
+  .flex-#{$name} {
+    flex-wrap: #{$wrap};
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .flex-xs {
+    display: flex;
+  }
+
+  .flex-fill-xs {
+    flex: 1 1 auto;
+  }
+
+  @each $direction in $directions {
+    .flex-xs-#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $name, $wrap in $wraps {
+    .flex-xs-#{$name} {
+      flex-wrap: #{$wrap};
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  .flex-sm {
+    display: flex;
+  }
+
+  .flex-fill-sm {
+    flex: 1 1 auto;
+  }
+
+  @each $direction in $directions {
+    .flex-sm-#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $name, $wrap in $wraps {
+    .flex-sm-#{$name} {
+      flex-wrap: #{$wrap};
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  .flex-md {
+    display: flex;
+  }
+
+  .flex-fill-md {
+    flex: 1 1 auto;
+  }
+
+  @each $direction in $directions {
+    .flex-md-#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $name, $wrap in $wraps {
+    .flex-md-#{$name} {
+      flex-wrap: #{$wrap};
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  .flex-lg {
+    display: flex;
+  }
+
+  .flex-fill-lg {
+    flex: 1 1 auto;
+  }
+
+  @each $direction in $directions {
+    .flex-lg-#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $name, $wrap in $wraps {
+    .flex-lg-#{$name} {
+      flex-wrap: #{$wrap};
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  .flex-xl {
+    display: flex;
+  }
+
+  .flex-fill-xl {
+    flex: 1 1 auto;
+  }
+
+  @each $direction in $directions {
+    .flex-xl-#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $name, $wrap in $wraps {
+    .flex-xl-#{$name} {
+      flex-wrap: #{$wrap};
+    }
+  }
+}

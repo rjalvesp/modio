@@ -1,0 +1,49 @@
+@import './screen-sizes';
+
+$values: 'relative', 'fixed', 'absolute';
+
+@each $value in $values {
+  .pos-#{$value} {
+    position: #{$value};
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  @each $value in $values {
+    .pos-xs-#{$value} {
+      position: #{$value};
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @each $value in $values {
+    .pos-sm-#{$value} {
+      position: #{$value};
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @each $value in $values {
+    .pos-md-#{$value} {
+      position: #{$value};
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @each $value in $values {
+    .pos-lg-#{$value} {
+      position: #{$value};
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @each $value in $values {
+    .pos-xl-#{$value} {
+      position: #{$value};
+    }
+  }
+}

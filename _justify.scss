@@ -1,0 +1,99 @@
+@import "./screen-sizes";
+
+$targets: "content", "items", "self";
+
+$flexes: "start", "end";
+
+@each $target in $targets {
+  .justify-#{$target}-center {
+    justify-#{$target}: center;
+  }
+}
+
+@each $target in $targets {
+  @each $flex in $flexes {
+    .justify-#{$target}-#{$flex} {
+      justify-#{$target}: flex-#{$flex};
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  @each $target in $targets {
+    .justify-#{$target}-xs-center {
+      justify-#{$target}: center;
+    }
+  }
+
+  @each $target in $targets {
+    @each $flex in $flexes {
+      .justify-#{$target}-xs-#{$flex} {
+        justify-#{$target}: flex-#{$flex};
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @each $target in $targets {
+    .justify-#{$target}-sm-center {
+      justify-#{$target}: center;
+    }
+  }
+
+  @each $target in $targets {
+    @each $flex in $flexes {
+      .justify-#{$target}-sm-#{$flex} {
+        justify-#{$target}: flex-#{$flex};
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @each $target in $targets {
+    .justify-#{$target}-md-center {
+      justify-#{$target}: center;
+    }
+  }
+
+  @each $target in $targets {
+    @each $flex in $flexes {
+      .justify-#{$target}-md-#{$flex} {
+        justify-#{$target}: flex-#{$flex};
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @each $target in $targets {
+    .justify-#{$target}-lg-center {
+      justify-#{$target}: center;
+    }
+  }
+
+  @each $target in $targets {
+    @each $flex in $flexes {
+      .justify-#{$target}-lg-#{$flex} {
+        justify-#{$target}: flex-#{$flex};
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @each $target in $targets {
+    .justify-#{$target}-xl-center {
+      justify-#{$target}: center;
+    }
+  }
+
+  @each $target in $targets {
+    @each $flex in $flexes {
+      .justify-#{$target}-xl-#{$flex} {
+        justify-#{$target}: flex-#{$flex};
+      }
+    }
+  }
+}

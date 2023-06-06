@@ -1,0 +1,185 @@
+@import "./screen-sizes";
+
+@mixin margins {
+  @for $i from 0 through 20 {
+    .m-#{$i} {
+      margin: #{$i / 4}rem;
+    }
+    .mt-#{$i} {
+      margin-top: #{$i / 4}rem;
+    }
+    .mr-#{$i} {
+      margin-right: #{$i / 4}rem;
+    }
+    .mb-#{$i} {
+      margin-bottom: #{$i / 4}rem;
+    }
+    .ml-#{$i} {
+      margin-left: #{$i / 4}rem;
+    }
+    .my-#{$i} {
+      margin-top: #{$i / 4}rem;
+      margin-bottom: #{$i / 4}rem;
+    }
+    .mx-#{$i} {
+      margin-left: #{$i / 4}rem;
+      margin-right: #{$i / 4}rem;
+    }
+  }
+}
+@include margins;
+
+@media only screen and (max-width: $mobile-max) {
+  @mixin margins-xs {
+    @for $i from 0 through 20 {
+      .m-xs-#{$i} {
+        margin: #{$i / 4}rem;
+      }
+      .mt-xs-#{$i} {
+        margin-top: #{$i / 4}rem;
+      }
+      .mr-xs-#{$i} {
+        margin-right: #{$i / 4}rem;
+      }
+      .mb-xs-#{$i} {
+        margin-bottom: #{$i / 4}rem;
+      }
+      .ml-xs-#{$i} {
+        margin-left: #{$i / 4}rem;
+      }
+      .my-xs-#{$i} {
+        margin-top: #{$i / 4}rem;
+        margin-bottom: #{$i / 4}rem;
+      }
+      .mx-xs-#{$i} {
+        margin-left: #{$i / 4}rem;
+        margin-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include margins-xs;
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @mixin margins-sm {
+    @for $i from 0 through 20 {
+      .m-sm-#{$i} {
+        margin: #{$i / 4}rem;
+      }
+      .mt-sm-#{$i} {
+        margin-top: #{$i / 4}rem;
+      }
+      .mr-sm-#{$i} {
+        margin-right: #{$i / 4}rem;
+      }
+      .mb-sm-#{$i} {
+        margin-bottom: #{$i / 4}rem;
+      }
+      .ml-sm-#{$i} {
+        margin-left: #{$i / 4}rem;
+      }
+      .my-sm-#{$i} {
+        margin-top: #{$i / 4}rem;
+        margin-bottom: #{$i / 4}rem;
+      }
+      .mx-sm-#{$i} {
+        margin-left: #{$i / 4}rem;
+        margin-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include margins-sm;
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @mixin margins-md {
+    @for $i from 0 through 20 {
+      .m-md-#{$i} {
+        margin: #{$i / 4}rem;
+      }
+      .mt-md-#{$i} {
+        margin-top: #{$i / 4}rem;
+      }
+      .mr-md-#{$i} {
+        margin-right: #{$i / 4}rem;
+      }
+      .mb-md-#{$i} {
+        margin-bottom: #{$i / 4}rem;
+      }
+      .ml-md-#{$i} {
+        margin-left: #{$i / 4}rem;
+      }
+      .my-md-#{$i} {
+        margin-top: #{$i / 4}rem;
+        margin-bottom: #{$i / 4}rem;
+      }
+      .mx-md-#{$i} {
+        margin-left: #{$i / 4}rem;
+        margin-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include margins-md;
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @mixin margins-lg {
+    @for $i from 0 through 20 {
+      .m-lg-#{$i} {
+        margin: #{$i / 4}rem;
+      }
+      .mt-lg-#{$i} {
+        margin-top: #{$i / 4}rem;
+      }
+      .mr-lg-#{$i} {
+        margin-right: #{$i / 4}rem;
+      }
+      .mb-lg-#{$i} {
+        margin-bottom: #{$i / 4}rem;
+      }
+      .ml-lg-#{$i} {
+        margin-left: #{$i / 4}rem;
+      }
+      .my-lg-#{$i} {
+        margin-top: #{$i / 4}rem;
+        margin-bottom: #{$i / 4}rem;
+      }
+      .mx-lg-#{$i} {
+        margin-left: #{$i / 4}rem;
+        margin-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include margins-lg;
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @mixin margins-xl {
+    @for $i from 0 through 20 {
+      .m-xl-#{$i} {
+        margin: #{$i / 4}rem;
+      }
+      .mt-xl-#{$i} {
+        margin-top: #{$i / 4}rem;
+      }
+      .mr-xl-#{$i} {
+        margin-right: #{$i / 4}rem;
+      }
+      .mb-xl-#{$i} {
+        margin-bottom: #{$i / 4}rem;
+      }
+      .ml-xl-#{$i} {
+        margin-left: #{$i / 4}rem;
+      }
+      .my-xl-#{$i} {
+        margin-top: #{$i / 4}rem;
+        margin-bottom: #{$i / 4}rem;
+      }
+      .mx-xl-#{$i} {
+        margin-left: #{$i / 4}rem;
+        margin-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include margins-xl;
+}

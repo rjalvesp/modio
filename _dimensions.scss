@@ -1,0 +1,200 @@
+@import "./screen-sizes";
+
+$sizes: "min-", "max-", "";
+$values: "min", "max", "fit";
+$dimensions: "width", "height";
+
+$fifths: (
+  "one-fifth": 20%,
+  "two-fifths": 40%,
+  "three-fifths": 60%,
+  "four-fifths": 80%,
+);
+$quarters: (
+  "one-quarter": 25%,
+  "two-quarters": 50%,
+  "three-quarters": 75%,
+);
+$thirds: (
+  "one-third": 33.33%,
+  "two-thrids": 66.66%,
+  "full": 100%,
+);
+
+@mixin dimensions {
+  @each $dimension in $dimensions {
+    @each $size in $sizes {
+      @each $value in $values {
+        .#{$size}#{$dimension}-#{$value}-content {
+          #{$size}#{$dimension}: #{$value}-content;
+        }
+      }
+      @each $name, $quarter in $quarters {
+        .#{$size}#{$dimension}-#{$name} {
+          #{$size}#{$dimension}: #{$quarter};
+        }
+      }
+      @each $name, $third in $thirds {
+        .#{$size}#{$dimension}-#{$name} {
+          #{$size}#{$dimension}: #{$third};
+        }
+      }
+      @each $name, $fifth in $fifths {
+        .#{$size}#{$dimension}-#{$name} {
+          #{$size}#{$dimension}: #{$fifth};
+        }
+      }
+    }
+  }
+}
+@include dimensions;
+
+@media only screen and (max-width: $mobile-max) {
+  @mixin dimensions-xs {
+    @each $dimension in $dimensions {
+      @each $size in $sizes {
+        @each $value in $values {
+          .#{$size}#{$dimension}-xs-#{$value}-content {
+            #{$size}#{$dimension}: #{$value}-content;
+          }
+        }
+        @each $name, $quarter in $quarters {
+          .#{$size}#{$dimension}-xs-#{$name} {
+            #{$size}#{$dimension}: #{$quarter};
+          }
+        }
+        @each $name, $third in $thirds {
+          .#{$size}#{$dimension}-xs-#{$name} {
+            #{$size}#{$dimension}: #{$third};
+          }
+        }
+        @each $name, $fifth in $fifths {
+          .#{$size}#{$dimension}-xs-#{$name} {
+            #{$size}#{$dimension}: #{$fifth};
+          }
+        }
+      }
+    }
+  }
+  @include dimensions-xs;
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @mixin dimensions-sm {
+    @each $dimension in $dimensions {
+      @each $size in $sizes {
+        @each $value in $values {
+          .#{$size}#{$dimension}-sm-#{$value}-content {
+            #{$size}#{$dimension}: #{$value}-content;
+          }
+        }
+        @each $name, $quarter in $quarters {
+          .#{$size}#{$dimension}-sm-#{$name} {
+            #{$size}#{$dimension}: #{$quarter};
+          }
+        }
+        @each $name, $third in $thirds {
+          .#{$size}#{$dimension}-sm-#{$name} {
+            #{$size}#{$dimension}: #{$third};
+          }
+        }
+        @each $name, $fifth in $fifths {
+          .#{$size}#{$dimension}-sm-#{$name} {
+            #{$size}#{$dimension}: #{$fifth};
+          }
+        }
+      }
+    }
+  }
+  @include dimensions-sm;
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @mixin dimensions-md {
+    @each $dimension in $dimensions {
+      @each $size in $sizes {
+        @each $value in $values {
+          .#{$size}#{$dimension}-md-#{$value}-content {
+            #{$size}#{$dimension}: #{$value}-content;
+          }
+        }
+        @each $name, $quarter in $quarters {
+          .#{$size}#{$dimension}-md-#{$name} {
+            #{$size}#{$dimension}: #{$quarter};
+          }
+        }
+        @each $name, $third in $thirds {
+          .#{$size}#{$dimension}-md-#{$name} {
+            #{$size}#{$dimension}: #{$third};
+          }
+        }
+        @each $name, $fifth in $fifths {
+          .#{$size}#{$dimension}-md-#{$name} {
+            #{$size}#{$dimension}: #{$fifth};
+          }
+        }
+      }
+    }
+  }
+  @include dimensions-md;
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @mixin dimensions-lg {
+    @each $dimension in $dimensions {
+      @each $size in $sizes {
+        @each $value in $values {
+          .#{$size}#{$dimension}-lg-#{$value}-content {
+            #{$size}#{$dimension}: #{$value}-content;
+          }
+        }
+        @each $name, $quarter in $quarters {
+          .#{$size}#{$dimension}-lg-#{$name} {
+            #{$size}#{$dimension}: #{$quarter};
+          }
+        }
+        @each $name, $third in $thirds {
+          .#{$size}#{$dimension}-lg-#{$name} {
+            #{$size}#{$dimension}: #{$third};
+          }
+        }
+        @each $name, $fifth in $fifths {
+          .#{$size}#{$dimension}-lg-#{$name} {
+            #{$size}#{$dimension}: #{$fifth};
+          }
+        }
+      }
+    }
+  }
+  @include dimensions-lg;
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @mixin dimensions-xl {
+    @each $dimension in $dimensions {
+      @each $size in $sizes {
+        @each $value in $values {
+          .#{$size}#{$dimension}-xl-#{$value}-content {
+            #{$size}#{$dimension}: #{$value}-content;
+          }
+        }
+        @each $name, $quarter in $quarters {
+          .#{$size}#{$dimension}-xl-#{$name} {
+            #{$size}#{$dimension}: #{$quarter};
+          }
+        }
+        @each $name, $third in $thirds {
+          .#{$size}#{$dimension}-xl-#{$name} {
+            #{$size}#{$dimension}: #{$third};
+          }
+        }
+        @each $name, $fifth in $fifths {
+          .#{$size}#{$dimension}-xl-#{$name} {
+            #{$size}#{$dimension}: #{$fifth};
+          }
+        }
+      }
+    }
+  }
+  @include dimensions-xl;
+}

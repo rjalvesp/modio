@@ -1,0 +1,187 @@
+@import "./screen-sizes";
+
+$limit: 24;
+
+@mixin paddings {
+  @for $i from 0 through $limit {
+    .p-#{$i} {
+      padding: #{$i / 4}rem;
+    }
+    .pt-#{$i} {
+      padding-top: #{$i / 4}rem;
+    }
+    .pr-#{$i} {
+      padding-right: #{$i / 4}rem;
+    }
+    .pb-#{$i} {
+      padding-bottom: #{$i / 4}rem;
+    }
+    .pl-#{$i} {
+      padding-left: #{$i / 4}rem;
+    }
+    .py-#{$i} {
+      padding-top: #{$i / 4}rem;
+      padding-bottom: #{$i / 4}rem;
+    }
+    .px-#{$i} {
+      padding-left: #{$i / 4}rem;
+      padding-right: #{$i / 4}rem;
+    }
+  }
+}
+@include paddings;
+
+@media only screen and (max-width: $mobile-max) {
+  @mixin paddings-xs {
+    @for $i from 0 through $limit {
+      .p-xs-#{$i} {
+        padding: #{$i / 4}rem;
+      }
+      .pt-xs-#{$i} {
+        padding-top: #{$i / 4}rem;
+      }
+      .pr-xs-#{$i} {
+        padding-right: #{$i / 4}rem;
+      }
+      .pb-xs-#{$i} {
+        padding-bottom: #{$i / 4}rem;
+      }
+      .pl-xs-#{$i} {
+        padding-left: #{$i / 4}rem;
+      }
+      .py-xs-#{$i} {
+        padding-top: #{$i / 4}rem;
+        padding-bottom: #{$i / 4}rem;
+      }
+      .px-xs-#{$i} {
+        padding-left: #{$i / 4}rem;
+        padding-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include paddings-xs;
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @mixin paddings-sm {
+    @for $i from 0 through $limit {
+      .p-sm-#{$i} {
+        padding: #{$i / 4}rem;
+      }
+      .pt-sm-#{$i} {
+        padding-top: #{$i / 4}rem;
+      }
+      .pr-sm-#{$i} {
+        padding-right: #{$i / 4}rem;
+      }
+      .pb-sm-#{$i} {
+        padding-bottom: #{$i / 4}rem;
+      }
+      .pl-sm-#{$i} {
+        padding-left: #{$i / 4}rem;
+      }
+      .py-sm-#{$i} {
+        padding-top: #{$i / 4}rem;
+        padding-bottom: #{$i / 4}rem;
+      }
+      .px-sm-#{$i} {
+        padding-left: #{$i / 4}rem;
+        padding-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include paddings-sm;
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @mixin paddings-md {
+    @for $i from 0 through $limit {
+      .p-md-#{$i} {
+        padding: #{$i / 4}rem;
+      }
+      .pt-md-#{$i} {
+        padding-top: #{$i / 4}rem;
+      }
+      .pr-md-#{$i} {
+        padding-right: #{$i / 4}rem;
+      }
+      .pb-md-#{$i} {
+        padding-bottom: #{$i / 4}rem;
+      }
+      .pl-md-#{$i} {
+        padding-left: #{$i / 4}rem;
+      }
+      .py-md-#{$i} {
+        padding-top: #{$i / 4}rem;
+        padding-bottom: #{$i / 4}rem;
+      }
+      .px-md-#{$i} {
+        padding-left: #{$i / 4}rem;
+        padding-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include paddings-md;
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @mixin paddings-lg {
+    @for $i from 0 through $limit {
+      .p-lg-#{$i} {
+        padding: #{$i / 4}rem;
+      }
+      .pt-lg-#{$i} {
+        padding-top: #{$i / 4}rem;
+      }
+      .pr-lg-#{$i} {
+        padding-right: #{$i / 4}rem;
+      }
+      .pb-lg-#{$i} {
+        padding-bottom: #{$i / 4}rem;
+      }
+      .pl-lg-#{$i} {
+        padding-left: #{$i / 4}rem;
+      }
+      .py-lg-#{$i} {
+        padding-top: #{$i / 4}rem;
+        padding-bottom: #{$i / 4}rem;
+      }
+      .px-lg-#{$i} {
+        padding-left: #{$i / 4}rem;
+        padding-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include paddings-lg;
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @mixin paddings-xl {
+    @for $i from 0 through $limit {
+      .p-xl-#{$i} {
+        padding: #{$i / 4}rem;
+      }
+      .pt-xl-#{$i} {
+        padding-top: #{$i / 4}rem;
+      }
+      .pr-xl-#{$i} {
+        padding-right: #{$i / 4}rem;
+      }
+      .pb-xl-#{$i} {
+        padding-bottom: #{$i / 4}rem;
+      }
+      .pl-xl-#{$i} {
+        padding-left: #{$i / 4}rem;
+      }
+      .py-xl-#{$i} {
+        padding-top: #{$i / 4}rem;
+        padding-bottom: #{$i / 4}rem;
+      }
+      .px-xl-#{$i} {
+        padding-left: #{$i / 4}rem;
+        padding-right: #{$i / 4}rem;
+      }
+    }
+  }
+  @include paddings-xl;
+}

@@ -1,0 +1,131 @@
+@import "./screen-sizes";
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .invisible-xs {
+    visibility: hidden;
+  }
+
+  .visible-xs {
+    visibility: visible;
+  }
+
+  .none-xs {
+    display: none;
+  }
+
+  .block-xs {
+    display: block;
+  }
+
+  .inline-block-xs {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  .invisible-sm {
+    visibility: hidden;
+  }
+
+  .visible-sm {
+    visibility: visible;
+  }
+
+  .none-sm {
+    display: none;
+  }
+
+  .block-sm {
+    display: block;
+  }
+
+  .inline-block-sm {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  .invisible-md {
+    visibility: hidden;
+  }
+
+  .visible-md {
+    visibility: visible;
+  }
+
+  .none-md {
+    display: none;
+  }
+
+  .block-md {
+    display: block;
+  }
+
+  .inline-block-md {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  .invisible-lg {
+    visibility: hidden;
+  }
+
+  .visible-lg {
+    visibility: visible;
+  }
+
+  .none-lg {
+    display: none;
+  }
+
+  .block-lg {
+    display: block;
+  }
+
+  .inline-block-lg {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  .invisible-xl {
+    visibility: hidden;
+  }
+
+  .visible-xl {
+    visibility: visible;
+  }
+
+  .none-xl {
+    display: none;
+  }
+
+  .block-xl {
+    display: block;
+  }
+
+  .inline-block-xl {
+    display: inline-block;
+  }
+}

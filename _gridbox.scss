@@ -1,0 +1,106 @@
+@import "./screen-sizes";
+
+$grid: 12;
+$gaps: 4;
+
+$directions: "row-", "column-", "";
+
+.g {
+  display: grid;
+  grid-template-columns: repeat($grid, 1fr);
+  width: 100%;
+}
+
+@for $idx from 1 through $grid {
+  .g-#{$idx} {
+    grid-column: span #{$idx};
+  }
+}
+
+@for $idx from 1 through $gaps {
+  @each $direction in $directions {
+    .g-#{$direction}gap-#{$idx} {
+      grid-#{$direction}gap: #{$idx / 4}rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  @for $idx from 1 through $grid {
+    .g-xs-#{$idx} {
+      grid-column: span #{$idx};
+    }
+  }
+
+  @for $idx from 1 through $gaps {
+    @each $direction in $directions {
+      .g-#{$direction}gap-xs-#{$idx} {
+        grid-#{$direction}gap: #{$idx / 4}rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @for $idx from 1 through $grid {
+    .g-sm-#{$idx} {
+      grid-column: span #{$idx};
+    }
+  }
+
+  @for $idx from 1 through $gaps {
+    @each $direction in $directions {
+      .g-#{$direction}gap-sm-#{$idx} {
+        grid-#{$direction}gap: #{$idx / 4}rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @for $idx from 1 through $grid {
+    .g-md-#{$idx} {
+      grid-column: span #{$idx};
+    }
+  }
+
+  @for $idx from 1 through $gaps {
+    @each $direction in $directions {
+      .g-#{$direction}gap-md-#{$idx} {
+        grid-#{$direction}gap: #{$idx / 4}rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @for $idx from 1 through $grid {
+    .g-lg-#{$idx} {
+      grid-column: span #{$idx};
+    }
+  }
+
+  @for $idx from 1 through $gaps {
+    @each $direction in $directions {
+      .g-#{$direction}gap-lg-#{$idx} {
+        grid-#{$direction}gap: #{$idx / 4}rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @for $idx from 1 through $grid {
+    .g-xl-#{$idx} {
+      grid-column: span #{$idx};
+    }
+  }
+
+  @for $idx from 1 through $gaps {
+    @each $direction in $directions {
+      .g-#{$direction}gap-xl-#{$idx} {
+        grid-#{$direction}gap: #{$idx / 4}rem;
+      }
+    }
+  }
+}

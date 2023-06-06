@@ -1,0 +1,85 @@
+@import "./screen-sizes";
+
+$options: hidden, visible, auto, scroll;
+
+@each $option in $options {
+  .overflow-#{$option} {
+    overflow: $option;
+  }
+  .overflow-y-#{$option} {
+    overflow-y: $option;
+  }
+  .overflow-x-#{$option} {
+    overflow-y: $option;
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  @each $option in $options {
+    .overflow-xs-#{$option} {
+      overflow: $option;
+    }
+    .overflow-y-xs-#{$option} {
+      overflow-y: $option;
+    }
+    .overflow-x-xs-#{$option} {
+      overflow-y: $option;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+  @each $option in $options {
+    .overflow-sm-#{$option} {
+      overflow: $option;
+    }
+    .overflow-y-sm-#{$option} {
+      overflow-y: $option;
+    }
+    .overflow-x-sm-#{$option} {
+      overflow-y: $option;
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+  @each $option in $options {
+    .overflow-md-#{$option} {
+      overflow: $option;
+    }
+    .overflow-y-md-#{$option} {
+      overflow-y: $option;
+    }
+    .overflow-x-md-#{$option} {
+      overflow-y: $option;
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+  @each $option in $options {
+    .overflow-lg-#{$option} {
+      overflow: $option;
+    }
+    .overflow-y-lg-#{$option} {
+      overflow-y: $option;
+    }
+    .overflow-x-lg-#{$option} {
+      overflow-y: $option;
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-large-min) {
+  @each $option in $options {
+    .overflow-xl-#{$option} {
+      overflow: $option;
+    }
+    .overflow-y-xl-#{$option} {
+      overflow-y: $option;
+    }
+    .overflow-x-xl-#{$option} {
+      overflow-y: $option;
+    }
+  }
+}

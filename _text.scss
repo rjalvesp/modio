@@ -1,0 +1,42 @@
+@use 'sass:math';
+
+$alignments: left, center, right, justify;
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@each $alignment in $alignments {
+  .text-#{$alignment} {
+    text-align: $alignment;
+  }
+}
+
+@for $weight from 1 through 9 {
+  .font-weight-#{$weight * 100} {
+    font-weight: #{$weight * 100};
+  }
+}
+
+@for $size from 0 through 5 {
+  .font-size-#{$size + 1} {
+    font-size: #{math.pow(1.125, $size)}rem;
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+}
+
+@media only screen and (max-width: $tablet-max) and (min-width: $tablet-min) {
+}
+
+@media only screen and (max-width: $screen-small-max) and (min-width: $screen-small-min) {
+}
+
+@media only screen and (max-width: $screen-max) and (min-width: $screen-min) {
+}
+
+@media only screen and (min-width: $screen-large-min) {
+}

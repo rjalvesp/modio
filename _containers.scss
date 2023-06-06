@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100%;
+}
+
+.main-container {
+  padding: 2rem;
+  padding-bottom: 6rem;
+  overflow: auto;
+}
+
+body {
+  @extend .full-page;
+}
